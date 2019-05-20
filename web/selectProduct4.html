@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/HelloServlet1_war_exploded/LoginServlet" method="post">
+        ユーザー名：<input type="text" name="name">
+        パスワード：<input type="text" name="name">
+        <input type="hidden" name="action" value="login">
+        <input type="submit" value="ログイン">
+    </form>
+
+    <hr>
+
+    <a href="/HelloServlet1_war_exploded/AddCartServlet?product_no=100">パソコン</a>
+    <a href="/HelloServlet1_war_exploded/AddCartServlet?product_no=101">プリンタ</a>
+    <a href="/HelloServlet1_war_exploded/AddCartServlet?product_no=102">デジタルカメラ</a>
+
+    <a href="/HelloServlet1_war_exploded/LoginServlet?action=logout">ログアウト</a>
+
+
+</body>
+</html>
