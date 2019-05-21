@@ -1,6 +1,7 @@
 package sample;
 
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +24,11 @@ public class PlusServlet extends HttpServlet {
         int i2 = Integer.parseInt(num2);
         int answer = i1 + i2;
 
-        out.println("<html><head><title>HelloServlet</title></head><body>");
-        out.println(answer);
-        out.println("</body></html>");
+        PlusBean bean = new PlusBean(i1, i2, answer);
+        request.setAttribute("plus", bean);
+
+        RequestDispatcher rd = request.getRequestDispatcher("/answer.jsp");
+        rd.forward(request, response);
 
 
     }
